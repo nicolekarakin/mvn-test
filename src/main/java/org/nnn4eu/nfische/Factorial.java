@@ -1,6 +1,6 @@
 package org.nnn4eu.nfische;
 
-public class Facultat {
+public class Factorial {
     public static int calculate(int num) {
         int result=1;
         if(num<=0)return 1;

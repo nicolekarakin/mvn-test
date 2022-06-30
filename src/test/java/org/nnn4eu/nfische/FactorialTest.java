@@ -3,56 +3,54 @@ package org.nnn4eu.nfische;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class FacultatTest {
+class FactorialTest {
     @Test
-    void testFacultat1(){
+    void testFactorial1(){
         //given
         int num=1;
         //when
-        int actual=Facultat.calculate(num);
+        int actual=Factorial.calculate(num);
         //then
         int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void testFacultat0(){
+    void testFactorial0(){
         //given
         int num=0;
         //when
-        int actual=Facultat.calculate(num);
+        int actual=Factorial.calculate(num);
         //then
         int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void testFacultat_1(){
+    void testFactorial_1(){
         //given
         int num=-1;
         //when
-        int actual=Facultat.calculate(num);
+        int actual=Factorial.calculate(num);
         //then
         int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void testFacultat3(){
+    void testFactorial3(){
         //given
         int num=3;
         //when
-        int actual=Facultat.calculate(num);
+        int actual=Factorial.calculate(num);
         //then
         int expected = 2*3;
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    void testFacultat5(){
+    void testFactorial5(){
         //given
         int num=5;
         //when
-        int actual=Facultat.calculate(num);
+        int actual=Factorial.calculate(num);
         //then
         int expected = 2*3*4*5;
         Assertions.assertEquals(expected, actual);
@@ -60,22 +58,22 @@ class FacultatTest {
 
 
     @Test
-    void testFacultat3_2(){
+    void testFactorial3_2(){
         //given
         int num=3;
         //when
-        int actual=Facultat.calculate2(num);
+        int actual=Factorial.calculate2(num);
         //then
         int expected = 2*3;
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    void testFacultat5_2(){
+    void testFactorial5_2(){
         //given
         int num=5;
         //when
-        int actual=Facultat.calculate2(num);
+        int actual=Factorial.calculate2(num);
         //then
         int expected = 2*3*4*5;
         Assertions.assertEquals(expected, actual);
