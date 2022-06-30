@@ -11,4 +11,11 @@ public class Main {
         System.out.println(JavaDummy.printSumm( ab[0], ab[1]));
         System.out.println(JavaDummy.greaterThanX(ab[0],100));
     }
+
+    public static String transform(int num){
+        String result = num+"";
+        if (num%5 == 0 || num%3 == 0)result="Fizz";
+        if (num%3 == 0) result=result+"Bazz";
+        return result;
+    }
 }
