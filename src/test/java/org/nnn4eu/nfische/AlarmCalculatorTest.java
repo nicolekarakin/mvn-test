@@ -5,16 +5,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class RoomCalculatorTest {
+class AlarmCalculatorTest {
     @Test
     void numberGreaterThan30(){
         //given
         int limit =30;
         int num=30;
         //when
-        String actual=RoomCalculator.greaterThan(num,limit);
+        String actual= AlarmCalculator.greaterThan(num,limit);
         //then
         String expected="nope";
         Assertions.assertEquals(expected,actual);
@@ -27,7 +25,7 @@ class RoomCalculatorTest {
         int limit =30;
 
         //when
-        String actual=RoomCalculator.greaterThan(num,limit);
+        String actual= AlarmCalculator.greaterThan(num,limit);
         //then
         String expected="ok";
         Assertions.assertEquals(expected,actual);
@@ -39,7 +37,7 @@ class RoomCalculatorTest {
         int limit =30;
 
         //when
-        String actual=RoomCalculator.greaterThan(num,limit);
+        String actual= AlarmCalculator.greaterThan(num,limit);
         //then
         String expected="nope";
         Assertions.assertEquals(expected,actual);
