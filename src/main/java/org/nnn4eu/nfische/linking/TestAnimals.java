@@ -8,7 +8,7 @@ public class TestAnimals {
         System.out.println("Animal a="+a);
         System.out.println("Animal b="+b);
         System.out.println("Horse  c="+c);
-        System.out.println("Proof ==========================================================");
+        System.out.println("Proof: overriden funcs at runtime | static funcs at compile time");
         System.out.println("non-static eat() comes from instance type (ref-object) at run-time and overrides");
         System.out.println("static xyz() comes from reference type (ref-class) and doesn't override");
         System.out.println("================================================================");
@@ -27,5 +27,34 @@ public class TestAnimals {
         System.out.print("calling a.xyz(): "); a.xyz();
         System.out.print("calling c.xyz(): "); c.xyz();
 
+        System.out.println("\nProof overloaden funcs at compile time==========================");
+        System.out.println("static whoiam(Animal animal) takes reference type (ref-class) of Argument compile time and overloads");
+        System.out.println("static whoiam(Horse horse) takes reference type (ref-class) of Argument compile time and overloads");
+        System.out.println("================================================================");
+
+        System.out.print("calling whoiam(a): "); whoiam(a);
+        System.out.print("calling whoiam(c): "); whoiam(c);
+
+        System.out.println("\nGenerics==========================");
+        System.out.print("calling whoiamY(a): "); whoiamY(a);
+        System.out.print("calling whoiamY(c): "); whoiamY(c);
+    }
+
+    public static void whoiam(Animal animal){
+        System.out.println("static whoiam(Animal animal)");
+        animal.eat();
+        animal.xyz();
+    }
+
+    public static void whoiam(Horse horse){
+        System.out.println("static whoiam(Horse horse)");
+        horse.eat();
+        horse.xyz();
+    }
+
+    public static <T extends Animal> void whoiamY(T animal){
+        System.out.println("static <T extends Animal> void whoiam(T animal)");
+        animal.eat();
+        animal.xyz();
     }
 }
