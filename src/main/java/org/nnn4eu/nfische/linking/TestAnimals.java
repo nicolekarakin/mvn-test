@@ -38,6 +38,12 @@ public class TestAnimals {
         System.out.println("\nGenerics==========================");
         System.out.print("calling whoiamY(a): "); whoiamY(a);
         System.out.print("calling whoiamY(c): "); whoiamY(c);
+
+        System.out.println("\nOnly child method==========================");
+        //Animal a2=new Horse(); a2.runrun();
+        //System.out.print("calling a.runrun(): "); a.runrun();
+        System.out.print("calling c.runrun(): "); c.runrun();
+        System.out.print("calling new Horse().runrun(): "); new Horse().runrun();
     }
 
     public static void whoiam(Animal animal){
